@@ -1,14 +1,12 @@
 import React from "react";
 import styled, {css} from "styled-components";
+import {circle} from "../../utils/mixins";
 
 const circleMixinFunc = (color, size = "8px") => css`
   content: "";
   display: block;   // 块级元素 ，此元素前后会带有换行符。
   position: absolute;
-  width: ${size};
-  height: ${size};
-  border-radius: 50%;
-  background-color: ${color};
+  ${circle(color, size)}
 `
 
 const StyledAvatar = styled.div`

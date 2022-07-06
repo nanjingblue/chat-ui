@@ -1,5 +1,4 @@
 import Avatar from "./index";
-import "story.css"
 
 import face1 from "assets/images/face-male-1.jpg"
 import face2 from "assets/images/face-male-2.jpg"
