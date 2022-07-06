@@ -8,15 +8,15 @@ export default {
     components: NavBar
 }
 
-export const Default = () => <NavBar>Hello world</NavBar>
+export const Default = () => <NavBar/>
 
 export const Menu = () => {
     return (
         <div css={`
-            background-color: ${({ theme }) => theme.darkPurple};
-            width: 100px;
+          background-color: ${({theme}) => theme.darkPurple};
+          width: 100px;
         `}>
-            <MenuItem showBadge active icon={faCommentDots} />
+            <MenuItem showBadge active icon={faCommentDots}/>
         </div>
     )
 }
