@@ -6,7 +6,7 @@ function Badge({children, show = false, count = 0, showZero = false, ...rest}) {
     return (
         // variant 变体
         <StyledBadge variant={children ? "dot" : "default"} show={show} count={count} showZero={showZero} {...rest}>
-           {children || <Count>{count}</Count>}
+            {children || <Count>{count}</Count>}
         </StyledBadge>
     )
 }

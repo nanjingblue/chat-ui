@@ -9,7 +9,7 @@ import Styled<%= name%> from "./style";
 function <%= name%>({children, ...rest}) {
     return (
         <Styled<%= name%> {...rest}>
-           {children}
+            {children}
         </Styled<%= name%>>
     )
 }
