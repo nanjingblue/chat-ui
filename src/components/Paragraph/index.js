@@ -9,7 +9,7 @@ function Paragraph({children, ellipsis, ...rest}) {
     return (
         // as="p" 表示以p标签渲染 做到段落换行
         <StyledParagraph as="p" ellipsis={ellipsis} {...rest}>
-           {children}
+            {children}
         </StyledParagraph>
     )
 }
