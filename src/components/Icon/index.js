@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StyledIcon from "./style";
+import SocialIcon from "./SocialIcon";
 
 function Icon({
     icon: IconComponent,    // 起别名 IconComponent
@@ -24,5 +25,7 @@ Icon.propTypes = {
     color: PropTypes.string,
     opacity: PropTypes.number
 }
+
+Icon.Social = SocialIcon
 
 export default Icon

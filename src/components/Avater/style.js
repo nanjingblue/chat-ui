@@ -37,7 +37,7 @@ const StatusIcon = styled.div`
 const AvatarClip = styled.div`
   width: ${({size}) => size};
   height: ${({size}) => size};
-  border-radius: 50px;
+  border-radius: 50%;
   overflow: hidden;   // 图片溢出的部分不显示
 `
 
