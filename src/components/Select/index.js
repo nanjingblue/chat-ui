@@ -5,7 +5,7 @@ import StyledSelect from "./style";
 function Select({children, ...rest}) {
     return (
         <StyledSelect {...rest}>
-           {children}
+            {children}
         </StyledSelect>
     )
 }

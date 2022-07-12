@@ -5,6 +5,7 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {useTheme} from "styled-components";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import InputText from "./InputText";
 
 function Input({placeholder = "请输入内容", prefix, suffix, ...rest}) {
     return (
@@ -23,6 +24,7 @@ function Search({placeholder = "请输入内容...", ...rest}) {
     )
 }
 Input.Search = Search
+Input.Text = InputText
 
 Input.propTypes = {
     placeholder: PropTypes.string,

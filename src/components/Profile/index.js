@@ -15,19 +15,28 @@ import Seperator from "../Seperator";
 import TextStories from "../Text/text.stories";
 import Text from "../Text";
 import { ReactComponent as Cross} from "assets/icons/cross.svg";
+import Button from "../Button";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPencil} from "@fortawesome/free-solid-svg-icons";
 
-function Profile({children, ...rest}) {
+function Profile({showEditBtn, showCloseIcon=true, onEdit, status, children, ...rest}) {
     return (
         <StyledProfile {...rest}>
-            <CloseIcon icon={Cross} />
+            {/*关闭按钮*/}
+            {showCloseIcon && < CloseIcon icon={Cross} />}
             <Avatar
-                css={`margin: 26px 0`}
+                css={`margin: 26px 0; grid-area: 1 / 1 / 3 / 2;`}
                 src={seven}
                 size="160px"
-                status="online"
+                status={status}
                 statusIconSize="25px"
             />
-
+            {/*编辑按钮*/}
+            {showEditBtn && (
+                <Button size="52px" onClick={onEdit} css={`grid-area: 1 / 1 / 3 / 2; align-self: end; margin-left: 100px; z-index: 10;`}>
+                    <FontAwesomeIcon icon={faPencil} fontSize="24px" />
+                </Button>
+            )}
             <Paragraph
                 size="xlarge"
                 css={`margin-bottom: 12px;`}
