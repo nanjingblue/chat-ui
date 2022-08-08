@@ -10,10 +10,10 @@ import {ReactComponent as Call} from "assets/icons/call.svg"
 import {ReactComponent as Camera} from "assets/icons/camera.svg"
 import {ReactComponent as Options} from "assets/icons/options.svg"
 
-function TitleBar({children, ...rest}) {
+function TitleBar({onAvatarClick, children, ...rest}) {
     return (
         <StyledTitleBar {...rest}>
-            <Avatar status="online" src={ganyu} />
+            <Avatar onClick={onAvatarClick} status="online" src={ganyu} />
             <Title>
                 <Paragraph size="large">甘雨</Paragraph>
                 <Paragraph type="secondary">

@@ -7,10 +7,10 @@ import ChatBubble from "../ChatBubble";
 import Emoji from "../Emoji";
 import { Conversations } from "./style";
 
-function Conversation({children, ...rest}) {
+function Conversation({onAvatarClick, children, ...rest}) {
     return (
         <StyledConversation>
-            <TitleBar />
+            <TitleBar onAvatarClick={onAvatarClick} />
             <Conversations>
                 <ChatBubble time = "昨天 下午16：32">来丸 GenShin </ChatBubble>
                 <MyChatBubble time = "昨天 下午16:33">来了</MyChatBubble>

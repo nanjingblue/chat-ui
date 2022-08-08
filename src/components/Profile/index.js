@@ -19,11 +19,11 @@ import Button from "../Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPencil} from "@fortawesome/free-solid-svg-icons";
 
-function Profile({showEditBtn, showCloseIcon=true, onEdit, status, children, ...rest}) {
+function Profile({onCloseClick, showEditBtn, showCloseIcon=true, onEdit, status, children, ...rest}) {
     return (
         <StyledProfile {...rest}>
             {/*关闭按钮*/}
-            {showCloseIcon && < CloseIcon icon={Cross} />}
+            {showCloseIcon && < CloseIcon icon={Cross} onClick={onCloseClick} />}
             <Avatar
                 css={`margin: 26px 0; grid-area: 1 / 1 / 3 / 2;`}
                 src={seven}

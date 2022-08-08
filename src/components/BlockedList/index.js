@@ -13,14 +13,17 @@ import {ReactComponent as ArrowMenuLeft} from "assets/icons/arrowMenuLeft.svg";
 import Text from "../Text";
 import face from "assets/images/773.jpg"
 import {ReactComponent as closeCircle} from "assets/icons/closeCircle.svg";
+import {useHistory} from "react-router-dom";
 
 function BlockedList({children, ...rest}) {
+    const history = useHistory()
     return (
         <StyledBlockedList {...rest}>
             <SettingsMenu>
                 <Icon
                     icon={ArrowMenuLeft}
                     css={`cursor: pointer;`}
+                    onClick={() => history.goBack()}
                 />
                 <Text size="xxlarge">已屏蔽好友</Text>
             </SettingsMenu>
